@@ -49,7 +49,13 @@ function BalatrobotAPI.update(dt)
 
     data, msg_or_ip, port_or_nil = BalatrobotAPI.socket:receivefrom()
 	if data then
-        if data == 'HELLO\n' or data == 'HELLO' then
+        if data == 'MENU' then
+            BalatrobotAPI.waitingForAction = true
+            BalatrobotAPI.waitingFor = 'start_run'
+            G.FUNCS.go_to_menu({ })
+            Middleware.conditionalactions = { }
+            -- Middleware.c_start_run()
+        elseif data == 'HELLO\n' or data == 'HELLO' then
             BalatrobotAPI.notifyapiclient()
         else
             local _action = Utils.parseaction(data)

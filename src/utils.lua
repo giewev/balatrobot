@@ -122,6 +122,16 @@ function Utils.getRoundData()
 
     if G and G.GAME and G.GAME.current_round then
         _current_round.discards_left = G.GAME.current_round.discards_left
+        _current_round.discards_used = G.GAME.current_round.discards_used
+        _current_round.hands_left = G.GAME.current_round.hands_left
+        _current_round.hands_played = G.GAME.current_round.hands_played
+        _current_round.dollars = G.GAME.current_round.dollars
+        _current_round.round_dollars = G.GAME.current_round.round_dollars
+        _current_round.idol_card = G.GAME.current_round.idol_card
+        _current_round.mail_card = G.GAME.current_round.mail_card
+        _current_round.ancient_card = G.GAME.current_round.ancient_card
+        _current_round.castle_card = G.GAME.current_round.castle_card
+
     end
 
     return _current_round
@@ -141,7 +151,8 @@ function Utils.getGameData()
         _game.dollars = G.GAME.dollars
         _game.max_jokers = G.GAME.max_jokers
         _game.bankrupt_at = G.GAME.bankrupt_at
-        _game.chips = _game.chips
+        _game.chips = G.GAME.chips
+        _game.hand_stats = G.GAME.hands
     end
 
     return _game

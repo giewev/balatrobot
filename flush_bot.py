@@ -7,12 +7,11 @@ import time
 # otherwise keeps the most common suit
 # Discarding the rest, or playing the rest if there are no discards left
 class FlushBot(Bot):
-
     def skip_or_select_blind(self, G):
         cache_state("skip_or_select_blind", G)
         return [Actions.SELECT_BLIND]
 
-    def play_flushes(self, G):
+    def select_cards_from_hand(self, G):
         global t
         global first_time
         t += 1
@@ -133,5 +132,28 @@ def benchmark_multi_instance():
                 bot.stop_balatro_instance()
 
 
+def run_single_instance():
+    mybot = FlushBot(
+        deck="Blue Deck",
+        stake=1,
+        seed=None,
+        challenge=None,
+        bot_port=12348,
+    )
+
+    try:
+        mybot.start_balatro_instance()
+        time.sleep(10)
+        mybot.run()
+    finally:
+        mybot.stop_balatro_instance()
+
+
 if __name__ == "__main__":
-    benchmark_multi_instance()
+    global t
+    t = 0
+    global first_time
+    first_time = None
+
+    # benchmark_multi_instance()
+    run_single_instance()

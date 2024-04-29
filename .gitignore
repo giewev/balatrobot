@@ -1,3 +1,7 @@
 __pycache__
 Balatro
 gamestate_cache
+model_snapshots
+saved_models
+tensorboard_logs
+debug.py
