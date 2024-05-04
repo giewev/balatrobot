@@ -118,6 +118,23 @@ function BalatrobotAPI.init()
         card_eval_status_text = function(card, eval_type, amt, percent, dir, extra) end
     end
 
+    -- Disable chip count ticking up/down incrementally, instead set it directly
+    if BALATRO_BOT_CONFIG.disable_chip_easing then
+        local original_add_event = G.E_MANAGER.add_event
+        G.E_MANAGER.add_event = function(event, queue, front)
+            if event.trigger == 'ease' and event.ease.ref_value == 'chips' then
+                G.GAME.chips = event.ease.end_val
+            elseif event.trigger == 'ease' and event.ease.ref_value == 'chip_total' then
+                G.GAME.current_round.current_hand.chip_total = event.ease.end_val
+            else
+                original_add_event(event, queue, front)
+            end
+        end
+
+    -- G.FUNCS.wipe_on = function(message, no_card, timefac, alt_colour) end
+    -- G.FUNCS.wipe_off = function() end
+    -- delay = function(time, func) func() end
+
     -- Only draw/present every Nth frame
     local original_draw = love.draw
     local draw_count = 0

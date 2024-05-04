@@ -1,14 +1,23 @@
-from stable_baselines3 import A2C, PPO
-import pygame
+from stable_baselines3 import PPO
 import os
 import glob
 from gym_envs.balatro_blind_env import BalatroBlindEnv
-from balatro_connection import BalatroConnection
-import time
+from stable_baselines3.common.vec_env import (
+    DummyVecEnv,
+    VecNormalize,
+)
+
+
+def get_latest_vecnormalize(directory, pattern):
+    return get_latest_with_file_extension(directory, pattern, "pkl")
 
 
 def get_latest_model_path(directory, pattern):
-    list_of_files = glob.glob(f"{directory}/*{pattern}*.zip")
+    return get_latest_with_file_extension(directory, pattern, "zip")
+
+
+def get_latest_with_file_extension(directory, pattern, extension):
+    list_of_files = glob.glob(f"{directory}/*{pattern}*.{extension}")
     if not list_of_files:
         return None
     latest_file = max(list_of_files, key=os.path.getmtime)
@@ -25,34 +34,33 @@ def load_latest_model(directory, pattern, env, previous_model_path=None):
 
 if __name__ == "__main__":
     model_name = "ppo_balatro_blind_env"
-    connection = BalatroConnection(bot_port=12375)
-    connection.start_balatro_instance()
-    time.sleep(10)
-    env = BalatroBlindEnv(connection)
+    env = BalatroBlindEnv(12375)
+    env = DummyVecEnv([lambda: env])
+    env = VecNormalize.load(
+        get_latest_vecnormalize("./model_snapshots", model_name), env
+    )
+    env.training = False
+    env.norm_reward = False
+
     model, latest_model_path = load_latest_model("./model_snapshots", model_name, env)
     if model is not None:
         print(f"Loading with {latest_model_path}")
     else:
         print("No model snapshots found.")
 
-    # clock = pygame.time.Clock()
-
-    obs, info = env.reset()
+    obs = env.reset()
     n_steps = 10000
-    # steps_to_catch = 0
-    while True:
+    for _ in range(n_steps):
         act = model.predict(obs, deterministic=True)[0]
-        obs, reward, terminated, truncated, info = env.step(act)
+        obs, reward, done, info = env.step(act)
 
         new_model, new_model_path = load_latest_model(
             "./model_snapshots", model_name, env, latest_model_path
         )
         if new_model is not None:
-            obs, info = env.reset()
+            obs = env.reset()
             model = PPO.load(new_model_path, env)
             latest_model_path = new_model_path
             print(f"Model updated. Reloading with {latest_model_path}.")
-        elif terminated or truncated:
-            obs, info = env.reset()
-        # env.render()
-        # clock.tick(15)
+        elif done:
+            obs = env.reset()

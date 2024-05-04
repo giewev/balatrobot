@@ -5,6 +5,7 @@ import time
 from gamestates import cache_state
 from gymnasium import spaces as sp
 import enum
+from balatro_connection import BalatroConnection
 
 
 class Suit(enum.Enum):
@@ -14,98 +15,170 @@ class Suit(enum.Enum):
     Spades = 3
 
 
-class Rank(enum.Enum):
-    Ace = 0
-    Two = 1
-    Three = 2
-    Four = 3
-    Five = 4
-    Six = 5
-    Seven = 6
-    Eight = 7
-    Nine = 8
-    Ten = 9
-    Jack = 10
-    Queen = 11
-    King = 12
+rank_lookup = {
+    "Ace": 14,
+    "King": 13,
+    "Queen": 12,
+    "Jack": 11,
+    "Ten": 10,
+    "Nine": 9,
+    "Eight": 8,
+    "Seven": 7,
+    "Six": 6,
+    "Five": 5,
+    "Four": 4,
+    "Three": 3,
+    "Two": 2,
+    "10": 10,
+    "9": 9,
+    "8": 8,
+    "7": 7,
+    "6": 6,
+    "5": 5,
+    "4": 4,
+    "3": 3,
+    "2": 2,
+}
 
 
 class BalatroBlindEnv(gym.Env):
     metadata = {"name": "BalatroBlindEnv-v0"}
 
-    def __init__(self, balatro_connection):
-        self.balatro_connection = balatro_connection
-        self.cards_per_hand = 8
+    def __init__(self, env_config):
+        self.balatro_connection = None
+        self.port = env_config.worker_index + 12348
+        self.hand_size = 8
         self.deck = "Blue Deck"
         self.stake = 1
         self.challenge = None
         self.seed = None
+        self.last_chip_count = 0
 
         # Action space: First 8 binary entries for card selection, last entry for play/discard
-        self.action_space = sp.MultiBinary(self.cards_per_hand + 1)
+        # self.action_space = sp.MultiBinary(self.hand_size + 1)
 
-        # card = sp.MultiDiscrete([13, 4])
-        # hand = sp.MultiDiscrete([13, 4] * self.cards_per_hand)
-        # discards_left = sp.Discrete(5)
-        # deck = sp.MultiBinary(52)
+        # Discrete version of action space for rllib
+        self.action_space = sp.MultiDiscrete([2] * self.hand_size + [2])
+
+        # Action space: 5 cards to select, and a binary flag for play/discard
+        # 0 : hand_size-1 for card indices
+        # Special value of hand_size to indicate no card selected
+        # First card cannot be the special value, to ensure at least one card is always played
+        # Duplicate values are ignored
+        # self.action_space = sp.MultiDiscrete(
+        #     [self.hand_size] + [self.hand_size + 1] * 4 + [2]
+        # )
+
+        # hand_suits = sp.MultiDiscrete([4] * self.hand_size)
+
+        hand_suits = sp.Box(low=0, high=3, shape=(self.hand_size,), dtype=np.float32)
+        hand_ranks = sp.Box(low=2, high=14, shape=(self.hand_size,), dtype=np.float32)
+        discards_left = sp.Box(low=0, high=3, shape=(1,), dtype=np.float32)
+        hands_left = sp.Box(low=1, high=5, shape=(1,), dtype=np.float32)
+        chips = sp.Box(low=0, high=600.0, shape=(1,), dtype=np.float32)
+
+        # Flattened observation space since I'm getting issues with Dict spaces on rllib
+        self.observation_space = sp.Box(
+            low=np.concatenate(
+                [
+                    chips.low,
+                    discards_left.low,
+                    hand_ranks.low,
+                    hand_suits.low,
+                    hands_left.low,
+                ]
+            ),
+            high=np.concatenate(
+                [
+                    chips.high,
+                    discards_left.high,
+                    hand_ranks.high,
+                    hand_suits.high,
+                    hands_left.high,
+                ]
+            ),
+            dtype=np.float32,
+        )
 
         # Using a dictionary for clearer structure
-        # self.observation_space = sp.Dict({"hand": hand, "discards_left": discards_left})
-
-        # Simplified observation space for PoC
-        self.observation_space = sp.MultiDiscrete(([13, 4] * self.cards_per_hand) + [5])
+        # self.observation_space = sp.Dict(
+        #     {
+        #         "hand_suits": hand_suits,
+        #         "hand_ranks": hand_ranks,
+        #         "discards_left": discards_left,
+        #         "hands_left": hands_left,
+        #         "chips": chips,
+        #     }
+        # )
 
         self.reward_range = (-float("inf"), float("inf"))
 
-    def step(self, action):
-        action = self.action_vector_to_action(action)
-        # print(action)
-
+    def check_illegal_actions(self, action, G):
+        fail_reasons = []
         if len(action[1]) < 1 or len(action[1]) > 5:
-            print("bad card number, failing")
-            reward = -1  # Penalize invalid selections
-            info = {"message": f"Invalid number of cards selected: {len(action[1])}"}
-            return None, reward, False, True, info  # Truncated episode, not terminated
+            fail_reasons.append(f"Invalid number of cards selected: {len(action[1])}")
 
-        G = self.get_gamestate()
         if (
             G["current_round"]["discards_left"] == 0
             and action[0] == Actions.DISCARD_HAND
         ):
-            print("No discards left, failing")
-            reward = -1  # Penalize invalid discards
-            info = {"message": "No discards left"}
-            return None, reward, False, True, info  # Truncated episode, not terminated
+            fail_reasons.append("No discards left")
 
-        self.balatro_connection.connect()
-        self.balatro_connection.send_action(action)
-        G = self.get_gamestate()
-        terminated = False
-        truncated = False
-        reward = 0.1
-        info = {}
+        return fail_reasons
 
+    def check_game_over(self, G):
         current_round = G["current_round"]
         if current_round["hands_played"] == 0 and current_round["discards_used"] == 0:
             if G["round"] == 1:
-                terminated = True
-                reward = -0.5
-                info = {"message": "Game over"}
-                print("game over")
-                self.start_new_game()
-                G = self.get_gamestate()
-            else:
-                reward = 2
-                # Commented for the moment because these stats would get pulled from the following round
-                # reward += current_round["hands_left"] / 5
-                # reward += current_round["discards_left"] / 10
-                terminated = True
-                info = {"message": "Round won"}
-                print("round won")
-                self.start_new_game()
-                G = self.get_gamestate()
+                return "Game over, lost to blind"
 
-        return self.gamestate_to_observation(G), reward, terminated, truncated, info
+    def check_blind_win(self, G):
+        current_round = G["current_round"]
+        if current_round["hands_played"] == 0 and current_round["discards_used"] == 0:
+            if G["round"] != 1:
+                return "Beat previous blind, round won"
+
+    def step(self, action):
+        action = self.action_vector_to_action(action)
+
+        G = self.get_gamestate()
+        if G["current_round"]["discards_left"] == 0:
+            action[0] = Actions.PLAY_HAND
+
+        illegal_reasons = self.check_illegal_actions(action, G)
+        if len(illegal_reasons) > 0:
+            print(f"Illegal action: {illegal_reasons}")
+            # Testing the results of not truncating the episode when an illegal action is taken
+            return (
+                self.gamestate_to_observation(G),
+                -0.3,
+                False,  # Terminated
+                False,  # Truncated
+                {},
+            )
+
+        prev_G = G
+        self.balatro_connection.connect()
+        self.balatro_connection.send_action(action)
+        G = self.get_gamestate()
+        obs = self.gamestate_to_observation(G)
+
+        game_over = self.check_game_over(G)
+        if game_over:
+            return obs, 0.0, True, False, {}
+
+        round_won = self.check_blind_win(G)
+        if round_won:
+            reward = prev_G["current_round"]["hands_left"] * 0.5 + 1.0
+            return obs, reward, False, False, {}
+
+        if action[0] == Actions.DISCARD_HAND:
+            reward = 0.00
+        else:
+            new_chips = G["chips"]
+            reward = (new_chips - self.last_chip_count) / 100
+            self.last_chip_count = new_chips
+        return obs, reward, False, False, {}
 
     def action_vector_to_action(self, action_vector):
         card_selection = action_vector[:-1]
@@ -123,71 +196,74 @@ class BalatroBlindEnv(gym.Env):
     def get_gamestate(self):
         G = self.balatro_connection.poll_state()
         # Wait for the game to be in a state where we can select cards
-        i = 0
         while (
             not G.get("waitingForAction", False)
             or G["waitingFor"] != "select_cards_from_hand"
         ):
-            i += 1
-            # if i == 100:
-            #     print("Gamestate not ready, waiting for action")
-            #     print(G)
             if G.get("waitingForAction", False):
                 auto_action = self.hardcoded_action(G)
                 self.balatro_connection.send_action(auto_action)
 
             G = self.balatro_connection.poll_state()
-            # time.sleep(0.01)
 
         return G
 
     def gamestate_to_observation(self, G):
         hand = G["hand"]
         hand = [self.card_to_vectors(card) for card in hand]
-        # flatten hand and append discards_left
-        # hand = [item for sublist in hand for item in sublist]
+        hand_ranks = np.array([card["ranks"] for card in hand], dtype=np.float32)
+        hand_suits = np.array([card["suits"] for card in hand], dtype=np.float32)
 
-        return np.concatenate(hand + [[G["current_round"]["discards_left"]]])
-        # return hand + [G["current_round"]["discards_left"]]
-        # return {
-        #     "hand": np.concatenate(hand),
-        #     "discards_left": G["current_round"]["discards_left"],
-        # }
+        discards_left = np.array(
+            [G["current_round"]["discards_left"]], dtype=np.float32
+        )
+        hands_left = np.array([G["current_round"]["hands_left"]], dtype=np.float32)
+        chips = np.array([G["chips"]], dtype=np.float32)
+
+        flattened_obs = np.concatenate(
+            [
+                chips,
+                discards_left,
+                hand_ranks,
+                hand_suits,
+                hands_left,
+            ]
+        )
+        return flattened_obs
 
     def card_to_vectors(self, card):
         suit = card["suit"]
         rank = card["value"]
         suit = Suit[suit].value
+        rank = rank_lookup[rank]
+        return {"ranks": rank, "suits": suit}
 
-        if rank[0].isdigit():
-            rank = int(rank) - 1
-        else:
-            rank = Rank[rank].value
-        return [rank, suit]
+    def reset(self, seed=None, options=None):
+        if self.balatro_connection is None:
+            self.balatro_connection = BalatroConnection(bot_port=self.port)
+            if not self.balatro_connection.poll_state():
+                self.balatro_connection.start_balatro_instance()
+                time.sleep(10)
 
-    def reset(self, seed=None):
-        print("Resetting environment")
-        # self.start_new_game()
-        return self.gamestate_to_observation(self.get_gamestate()), {}
+        self.last_chip_count = 0
+        self.start_new_game()
+        obs = self.gamestate_to_observation(self.get_gamestate())
+        return obs, {}
+
+    def close(self):
+        self.balatro_connection.stop_balatro_instance()
 
     def start_new_game(self):
         G = self.get_gamestate()
         current_round = G["current_round"]
         if current_round["hands_played"] == 0 and current_round["discards_used"] == 0:
-            print("prompted to start a new game, but already in a new game")
             return
-        print("Starting new game")
-        # self.balatro_connection.send_action(
-        #     [Actions.START_RUN, self.stake, self.deck, self.seed, self.challenge]
-        # )
         self.balatro_connection.send_cmd("MENU")
 
     def seed(self, seed=None):
         pass
 
     def hardcoded_action(self, game_state):
-        # if self.G["state"] == State.GAME_OVER:
-        #     self.running = False
         match game_state["waitingFor"]:
             case "start_run":
                 return [
