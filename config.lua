@@ -6,7 +6,7 @@ BALATRO_BOT_CONFIG = {
     instant_move = true,
     disable_vsync = true,
     disable_card_eval_status_text = true, -- e.g. +10 when scoring a queen
-    disable_chip_easing = true,
+    disable_chip_easing = true, -- Chips don't tick up/down, they're set directly
     frame_ratio = 100, -- Draw every 100th frame, set to 1 for normal rendering
 }
 

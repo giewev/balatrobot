@@ -86,6 +86,19 @@ function Botlogger.start_run()
     end
 end
 
+function Botlogger.reset()
+    Botlogger.q_skip_or_select_blind = List.new()
+    Botlogger.q_select_cards_from_hand = List.new()
+    Botlogger.q_select_shop_action = List.new()
+    Botlogger.q_select_booster_action = List.new()
+    Botlogger.q_sell_jokers = List.new()
+    Botlogger.q_rearrange_jokers = List.new()
+    Botlogger.q_use_or_sell_consumables = List.new()
+    Botlogger.q_rearrange_consumables = List.new()
+    Botlogger.q_rearrange_hand = List.new()
+    Botlogger.q_start_run = List.new()
+end
+
 function Botlogger.init()
 
     Botlogger.q_skip_or_select_blind = List.new()

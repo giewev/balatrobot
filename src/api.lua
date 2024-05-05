@@ -50,11 +50,13 @@ function BalatrobotAPI.update(dt)
     data, msg_or_ip, port_or_nil = BalatrobotAPI.socket:receivefrom()
 	if data then
         if data == 'MENU' then
-            BalatrobotAPI.waitingForAction = true
-            BalatrobotAPI.waitingFor = 'start_run'
-            G.FUNCS.go_to_menu({ })
             Middleware.conditionalactions = { }
-            -- Middleware.c_start_run()
+            G.FUNCS.go_to_menu({ })
+            -- Botlogger.reset()
+            -- BalatrobotAPI.waitingForAction = true
+            -- BalatrobotAPI.waitingFor = 'start_run'
+            -- Middleware.queuedactions = { }
+            -- Middleware.currentaction = nil
         elseif data == 'HELLO\n' or data == 'HELLO' then
             BalatrobotAPI.notifyapiclient()
         else
@@ -130,6 +132,7 @@ function BalatrobotAPI.init()
                 original_add_event(event, queue, front)
             end
         end
+    end
 
     -- G.FUNCS.wipe_on = function(message, no_card, timefac, alt_colour) end
     -- G.FUNCS.wipe_off = function() end
