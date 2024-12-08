@@ -400,8 +400,8 @@ if __name__ == "__main__":
 
     # config = hier_config()
     # config = play_hand_config()
-    # config = blind_config()
-    config = curriculum_config()
+    config = blind_config()
+    # config = curriculum_config()
 
     # config = play_hand_config()
     # config = tune.with_resources(config, {"gpu": 0.25, "cpu": 2})

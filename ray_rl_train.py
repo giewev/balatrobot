@@ -5,8 +5,8 @@ import ray
 import ray.rllib
 from ray.rllib.algorithms.ppo import PPOConfig
 from gym_envs.balatro.hierarchical_env import BalatroHierarchicalEnv
-from gym_envs.balatro_blind_env import BalatroBlindEnv
-from gym_envs.balatro_shop_env import BalatroShopEnv
+from gym_envs.balatro.blind_env import BalatroBlindEnv
+from gym_envs.balatro.shop_env import BalatroShopEnv
 from ray.rllib.env.single_agent_env_runner import SingleAgentEnvRunner
 from ray.rllib.env.multi_agent_env_runner import MultiAgentEnvRunner
 from ray.rllib.connectors.env_to_module import (
@@ -15,7 +15,7 @@ from ray.rllib.connectors.env_to_module import (
     WriteObservationsToEpisodes,
     AgentToModuleMapping,
 )
-from balatro_blind_model import BalatroBlindModel
+from modeling.balatro_blind_model import BalatroBlindModel
 from ray.rllib.models import ModelCatalog
 
 from gymnasium import spaces as sp

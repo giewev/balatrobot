@@ -36,7 +36,8 @@ class BalatroBlindModel(TorchModelV2, nn.Module):
         self.value_layer = nn.Linear(256, 1)
 
     def forward(self, input_dict, state, seq_lens):
-        non_sequence = ["chips", "discards_left", "hands_left", "log_chip_goal"]
+        # non_sequence = ["chips", "discards_left", "hands_left", "log_chip_goal"]
+        non_sequence = ["chips", "discards_left", "hands_left"]
         non_sequence = torch.concat(
             [input_dict["obs"][feature] for feature in non_sequence], dim=1
         )  # [?, 3]

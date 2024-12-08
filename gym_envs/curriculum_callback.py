@@ -139,6 +139,8 @@ class CurriculumCallback(DefaultCallbacks):
 
         custom_metrics = result[ENV_RUNNER_RESULTS]["custom_metrics"]
 
+        print(result[ENV_RUNNER_RESULTS])
+        print(custom_metrics)
         chips = custom_metrics["chips"]
         custom_metrics["chips_99th"] = np.percentile(chips, 99)
         custom_metrics["chips_mean"] = np.mean(chips)
@@ -220,5 +222,3 @@ class CurriculumCallback(DefaultCallbacks):
                 }
             else:
                 return step, diff
-        if step == "chips_varied_joker":
-            
