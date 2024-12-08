@@ -1,0 +1,209 @@
+name,description,chips,mult,Scaling,Decaying,scored trigger,Discard trigger,Held in hand trigger,Retrigger,Income generator,Mult-multer,hand size,Tarot,Planet,Spectral,RerollSell effect,Card Enhancements,pair,two pair,three of a kind,straight,flush,full house,four of a kind,straight flush
+Joker, =+4 Mult,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Greedy Joker,Played cards with  Diamond suit give +3 Mult when scored,False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Lusty Joker,Played cards with  Heart suit give +3 Mult when scored,False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Wrathful Joker,Played cards with  Spade suit give +3 Mult when scored,False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Gluttonous Joker,Played cards with  Club suit give +3 Mult when scored,False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Jolly Joker, =+8 Mult if played hand contains a Pair,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False
+Zany Joker, =+12 Mult if played hand contains a Three of a Kind,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False
+Mad Joker, =+10 Mult if played hand contains a Two Pair,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,True,True,False,False,False,False,False,False
+Crazy Joker, =+12 Mult if played hand contains a Straight,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False
+Droll Joker, =+10 Mult if played hand contains a Flush,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False
+Sly Joker, =+50 Chips if played hand contains a Pair,True,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False
+Wily Joker, =+100 Chips if played hand contains a Three of a Kind,True,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False
+Clever Joker, =+80 Chips if played hand contains a Two Pair,True,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,True,True,False,False,False,False,False,False
+Devious Joker, =+100 Chips if played hand contains a Straight.,True,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False
+Crafty Joker, =+80 Chips if played hand contains a Flush,True,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False
+Half Joker, =+20 Mult if played hand contains 3 or fewer cards.,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Joker Stencil,"X1 Mult for each empty Joker slot. Joker Stencil included
+(Currently X1 Mult)",False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Four Fingers,All Flushes and Straights can be made with 4 cards,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,True,False,False,False
+Mime,Retrigger all card held in hand abilities,False,False,False,False,False,False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Credit Card,Go up to -$20 in debt,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Ceremonial Dagger,"When Blind is selected, destroy Joker to the right and permanently add double its sell value to this Mult (Currently +0 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False
+Banner, =+30 Chips for each remaining discard,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Mystic Summit, =+15 Mult when 0 discards remaining,False,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Marble Joker,Adds one Stone card to the deck when Blind is selected,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Loyalty Card,"x4 Mult every 6 hands played
+5 remaining",False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+8 Ball,"1 in 4 chance for each played 8 to create a Tarot card when scored
+(Must have room)",False,False,False,False,True,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False
+Misprint, =+? Mult ,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Dusk,Retrigger all played cards in final hand of the round,False,False,False,False,False,False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Raised Fist,Adds double the rank of lowest ranked card held in hand to Mult,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Chaos the Clown,1 free Reroll per shop,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False
+Fibonacci,"Each played Ace, 2, 3, 5, or 8 gives +8 Mult when scored",False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Steel Joker,"Gives X0.2 Mult for each Steel Card in your full deck
+(Currently X1 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Scary Face,Played face cards give +30 Chips when scored,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Abstract Joker," +3 Mult for each Joker card
+(Currently +0 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Delayed Gratification,Earn $2 per discard if no discards are used by end of the round,False,False,False,False,False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Hack,"Retrigger each played 2, 3, 4, or 5",False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Pareidolia,All cards are considered face cards,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Gros Michel," =+15 Mult
+1 in 6 chance this is destroyed at the end of round.",False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Even Steven,"Played cards with even rank give +4 Mult when scored
+(10, 8, 6, 4, 2)",False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Odd Todd,"Played cards with odd rank give +31 Chips when scored
+(A, 9, 7, 5, 3)",True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Scholar,Played Aces give +20 Chips and +4 Mult when scored,True,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Business Card,Played face cards have a 1 in 2 chance to give $2 when scored,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Supernova,Adds the number of times poker hand has been played this run to Mult,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Ride the Bus,"This Joker gains +1 Mult per consecutive hand played without a scoring face card
+(Currently +0 Mult)",False,True,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Space Joker,1 in 4 chance to upgrade level of played poker hand,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Egg,Gains $3 of sell value at end of round,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False
+Burglar,"When Blind is selected, gain +3 Hands and lose all discards",False,False,False,False,False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Blackboard,X3 Mult if all cards held in hand are  Spades or  Clubs,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Runner,"Gains +15 Chips if played hand contains a Straight
+(Currently +0 Chips)",True,False,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False
+Ice Cream," =+100 Chips
+-5 Chips for every hand played",True,False,False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+DNA,"If first hand of round has only 1 card, add a permanent copy to deck and draw it to hand",False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Splash,Every played card counts in scoring,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Blue Joker," =+2 Chips for each remaining card in deck
+(Currently +104 Chips) ",True,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Sixth Sense,"If first hand of round is a single 6, destroy it and create a Spectral card
+(Must have room)",False,False,False,False,False,False,True,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False
+Constellation,"This Joker gains X0.1 Mult every time a Planet card is used
+(Currently X1 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False
+Hiker,Every played card permanently gains +5 Chips when scored,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Faceless Joker,Earn $5 if 3 or more face cards are discarded at the same time,False,False,False,False,False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Green Joker," =+1 Mult per hand played
+-1 Mult per discard
+(Currently +0 Mult)",False,True,True,True,False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Superposition,"Create a Tarot card if poker hand contains an Ace and a Straight
+(Must have room)",False,False,False,False,False,False,True,False,False,False,False,True,False,False,False,False,False,False,False,True,False,False,False,False
+To Do List,"Earn $4 if poker hand is a [Poker Hand], poker hand changes at end of round",False,False,False,False,False,False,True,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Cavendish,"X3 Mult
+1 in 1000 chance this card is destroyed at the end of round",False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Card Sharp,X3 Mult if played poker hand has already been played this round,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Red Card,"This Joker gains +3 Mult when any Booster Pack is skipped
+(Currently +0 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False
+Madness,"When Small Blind or Big Blind is selected, gain X0.5 Mult and destroy a random Joker
+(Currently X1 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Square Joker,"This Joker gains +4 Chips if played hand has exactly 4 cards
+(Currently 0 Chips)",True,False,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Seance,"If poker hand is a Straight Flush, create a random Spectral card
+(Must have room)",False,False,False,False,False,False,True,False,False,False,False,False,False,True,False,False,False,False,False,True,True,False,False,True
+Riff-raff,"When Blind is selected, create 2 Common Jokers
+(Must have room)",False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Vampire,"This Joker gains X0.1 Mult per scoring Enhanced card played, removes card Enhancement
+(Currently X1 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False
+Shortcut,"Allows Straights to be made with gaps of 1 rank
+(ex: 10 8 6 5 3)",False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False
+Hologram,"This Joker gains X0.25 Mult every time a playing card is added to your deck
+(Currently X1 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Vagabond,Create a Tarot card if hand is played with $4 or less,False,False,False,False,False,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False
+Baron,Each King held in hand gives X1.5 Mult,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Cloud 9,"Earn $1 for each 9 in your full deck at end of round
+(Currently $4)",False,False,True,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Rocket,Earn $1 at end of round. Payout increases by $2 when Boss Blind is defeated,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Obelisk,"This Joker gains X0.2 Mult per consecutive hand played without playing your most played poker hand
+(Currently X1 Mult)",False,True,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Midas Mask,All played face cards become Gold cards when scored,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Luchador,Sell this card to disable the current Boss Blind,False,False,True,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False
+Photograph,First played face card gives X2 Mult when scored,False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Gift Card,Add $1 of sell value to every Joker and Consumable card at end of round,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False
+Turtle Bean," =+5 hand size, reduces by 1 each round ",False,False,False,True,False,False,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False
+Erosion," =+4 Mult for each card below [the deck's starting size] in your full deck
+(Currently +0 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Reserved Parking,Each face card held in hand has a 1 in 2 chance to give $1,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Mail-In Rebate,"Earn $5 for each discarded [rank], rank changes every round",False,False,False,False,False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+To the Moon,Earn an extra $1 of interest for every $5 you have at end of round,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Hallucination,"1 in 2 chance to create a Tarot card when any Booster Pack is opened
+(Must have room)",False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,True,False,False,False,False,False,False,False,False
+Fortune Teller," =+1 Mult per Tarot card used this run
+(Currently +0)",False,True,True,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False
+Juggler, =+1 hand size,False,False,False,False,False,False,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False
+Drunkard, =+1 discard each round,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Stone Joker,"Gives +25 Chips for each Stone Card in your full deck
+(Currently +0 Chips)",True,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Golden Joker,Earn $4 at end of round,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Lucky Cat,"This Joker gains X0.25 Mult every time a Lucky card successfully triggers
+(Currently X1 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Baseball Card,Uncommon Jokers each give X1.5 Mult,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Bull," =+2 Chips for each $1 you have
+(Currently +0 Chips)",True,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Diet Cola,Sell this card to create a free Double Tag,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False
+Trading Card,"If first discard of round has only 1 card, destroy it and earn $3",False,False,False,False,False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Flash Card,"This Joker gains +2 Mult per reroll in the shop
+(Currently +0 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False
+Popcorn," =+20 Mult
+-4 Mult per round played",False,True,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Spare Trousers,"This Joker gains +2 Mult if played hand contains a Two Pair
+(Currently +0 Mult)",False,True,True,False,False,False,True,False,False,False,False,False,False,False,False,False,True,True,False,False,False,False,False,False
+Ancient Joker,"Each played card with [suit] gives X1.5 Mult when scored,
+suit changes at end of round",False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Ramen,"X2 Mult, loses X0.01 Mult per card discarded",False,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Walkie Talkie,Each played 10 or 4 gives +10 Chips and +4 Mult when scored,True,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Seltzer,Retrigger all cards played for the next 10 hands,False,False,False,False,False,False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Castle,"This Joker gains +3 Chips per discarded [Suit] card, suit changes every round
+(Currently +0 Chips)",True,False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Smiley Face,Played face cards give +5 Mult when scored,False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Campfire,"This Joker gains X0.25 Mult for each card sold, resets when Boss Blind is defeated
+(Currently X1 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Golden Ticket,Played Gold cards earn $4 when scored,False,False,False,False,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Mr. Bones,"Prevents Death if chips scored are at least 25% of required chips
+self destructs",False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Acrobat,X3 Mult on final hand of round,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Sock and Buskin,Retrigger all played face cards,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Swashbuckler,"Adds the sell value of all other owned Jokers to Mult
+(Currently +1 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False
+Troubadour," =+2 hand size,
+-1 hand per round",False,False,False,False,False,False,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False
+Certificate,"When round begins, add a random playing card with a random seal to your hand",False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Smeared Joker,"Hearts and  Diamonds count as the same suit,  Spades and  Clubs count as the same suit",False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Throwback,"X0.25 Mult for each Blind skipped this run
+(Currently X1 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Hanging Chad,Retrigger first played card used in scoring 2 additional times,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Rough Gem,Played cards with  Diamond suit earn $1 when scored,False,False,False,False,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Bloodstone,1 in 2 chance for played cards with  Heart suit to give X1.5 Mult when scored,False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Arrowhead,Played cards with  Spade suit give +50 Chips when scored,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Onyx Agate,Played cards with  Club suit give +7 Mult when scored,False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Glass Joker,"This Joker gains X0.75 Mult for every Glass Card that is destroyed
+(Currently X1 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Showman,"Joker, Tarot, Planet, and Spectral cards may appear multiple times",False,True,False,False,False,False,False,True,False,False,False,True,True,True,False,False,False,False,False,False,False,False,False,False
+Flower Pot,"X3 Mult if poker hand contains a  Diamond card,  Club card,  Heart card, and  Spade card",False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Blueprint,Copies ability of Joker to the right,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Wee Joker,"This Joker gains +8 Chips when each played 2 is scored
+(Currently +0 Chips)",True,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Merry Andy," =+3 discards each round,
+-1 hand size",False,False,False,False,False,True,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False
+Oops! All 6s,"Doubles all listed probabilities
+(ex: 1 in 3 -> 2 in 3)",False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+The Idol,"Each played [rank] of [suit] gives X2 Mult when scored
+Card changes every round",False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Seeing Double,X2 Mult if played hand has a scoring Club card and a scoring card of any other suit,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Matador,Earn $8 if played hand triggers the Boss Blind ability,False,False,False,False,False,False,True,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Hit the Road,"This Joker gains X0.5 Mult for every Jack discarded this round
+(Currently X1 Mult)",False,True,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+The Duo,x2 Mult if played hand contains a Pair,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False
+The Trio,X3 Mult if played hand contains a Three of a Kind,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False
+The Family,X4 Mult if played hand contains a Four of a Kind,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,False
+The Order,X3 Mult if played hand contains a Straight,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False
+The Tribe,x2 Mult if played hand contains a Flush,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False
+Stuntman," =+250 Chips,
+-2 hand size",True,False,False,False,False,False,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False
+Invisible Joker,"After 2 rounds, sell this card to Duplicate a random Joker
+(Currently 0/2)
+(Removes Negative from copy)",False,False,True,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False
+Brainstorm,Copies the ability of leftmost Joker,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Satellite,Earn $1 at end of round per unique Planet card used this run,False,False,False,False,False,False,False,False,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False
+Shoot the Moon,Each Queen held in hand gives +13 Mult,False,True,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Driver's License,"x3 Mult if you have at least 16 Enhanced cards in your full deck
+(Currently 0)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False
+Cartomancer,"Create a Tarot card when Blind is selected
+(Must have room)",False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False
+Astronomer,All Planet cards and Celestial Packs in the shop are free,False,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False
+Burnt Joker,Upgrade the level of the first discarded poker hand each round,False,False,False,False,False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Bootstraps," =+2 Mult for every $5 you have
+(Currently +0 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Caino,"This Joker gains X1 Mult when a face card is destroyed
+(Currently X1 Mult)",False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Triboulet,Played Kings and Queens each give x2 Mult when scored,False,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Yorick,"This Joker gains X1 Mult every 23 [23] cards discarded
+(Currently X1 Mult)",False,True,True,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Chicot,Disables effect of every Boss Blind,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Perkeo,Creates a Negative copy of 1 random consumable card in your possession at the end of the shop,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False

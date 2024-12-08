@@ -3,6 +3,7 @@ import json
 import subprocess
 from enum import Enum
 import random
+import time
 
 
 class State(Enum):
@@ -56,11 +57,17 @@ class BalatroConnection:
         self.addr = ("localhost", self.bot_port)
         self.sock = None
         self.balatro_instance = None
+        self.last_action = None
+        self.start_time = None
 
     def start_balatro_instance(self):
+        self.start_time = time.time()
         balatro_exec_path = (
             r"C:\Program Files (x86)\Steam\steamapps\common\Balatro\Balatro.exe"
         )
+        # balatro_exec_path = (
+        #     r"/mnt/c/Program Files (x86)/Steam/steamapps/common/Balatro/Balatro.exe"
+        # )
         self.balatro_instance = subprocess.Popen(
             [balatro_exec_path, str(self.bot_port)]
         )
@@ -79,6 +86,8 @@ class BalatroConnection:
         self.connect()
         msg = bytes(cmd, "utf-8")
         self.sock.sendto(msg, self.addr)
+        response = self.receive_data()
+        return response
 
     def actionToCmd(self, action):
         result = []
@@ -99,16 +108,16 @@ class BalatroConnection:
             data = self.sock.recv(65536)
             jsondata = json.loads(data)
             if "response" in jsondata:
-                print(jsondata["response"])
+                pass
             return jsondata
         except socket.error as e:
             print(e)
+            self.sock.close()
             self.sock = None
             return {}
 
     def poll_state(self):
-        self.send_cmd("HELLO")
-        return self.receive_data()
+        return self.send_cmd("HELLO")
 
     def send_action(self, action):
         if action[0] == Actions.START_RUN:
@@ -116,9 +125,17 @@ class BalatroConnection:
             if seed is None:
                 seed = self.random_seed()
             action[3] = seed
+
+        self.last_action = action
         cmdstr = self.actionToCmd(action)
-        self.send_cmd(cmdstr)
+        return self.send_cmd(cmdstr)
 
     def random_seed(self):
         # e.g. 1OGB5WO
-        return "".join(random.choices("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", k=7))
+        seed = "".join(random.choices("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", k=7))
+
+        # The server side attempts to convert all params to int, so we need to force at least one letter
+        if seed.isnumeric():
+            seed = seed[:-1] + "A"
+
+        return seed

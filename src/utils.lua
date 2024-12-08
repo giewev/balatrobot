@@ -9,6 +9,12 @@ function Utils.getCardData(card)
     _card.suit = card.config.card.suit
     _card.value = card.config.card.value
     _card.card_key = card.config.card_key
+    if card.cost then
+        _card.cost = card.cost
+    end
+    if card.rarity then
+        _card.rarity = card.rarity
+    end
 
     return _card
 end
@@ -132,6 +138,10 @@ function Utils.getRoundData()
         _current_round.ancient_card = G.GAME.current_round.ancient_card
         _current_round.castle_card = G.GAME.current_round.castle_card
 
+        if G.GAME.blind then
+            _current_round.chips_required = G.GAME.blind.chips
+            _current_round.blind_name = G.GAME.blind.name
+        end
     end
 
     return _current_round
@@ -149,10 +159,15 @@ function Utils.getGameData()
         _game.interest_cap = G.GAME.interest_cap
         _game.inflation = G.GAME.inflation
         _game.dollars = G.GAME.dollars
-        _game.max_jokers = G.GAME.max_jokers
         _game.bankrupt_at = G.GAME.bankrupt_at
         _game.chips = G.GAME.chips
-        _game.hand_stats = G.GAME.hands
+
+        if G.jokers and G.jokers.card_limit then
+            _game.max_jokers = G.jokers.card_limit
+        else
+            _game.max_jokers = 5
+        end
+        -- _game.hand_stats = G.GAME.hands
     end
 
     return _game
@@ -216,6 +231,7 @@ Utils.ERROR = {
     NUMPARAMS = 2,
     MSGFORMAT = 3,
     INVALIDACTION = 4,
+    WRONGACTION = 5,
 }
 
 function Utils.validateAction(action)
@@ -223,11 +239,16 @@ function Utils.validateAction(action)
         return Utils.ERROR.NUMPARAMS
     elseif not action then
         return Utils.ERROR.MSGFORMAT
-    else
-        if not Bot.ACTIONPARAMS[action[1]].isvalid(action) then
-            return Utils.ERROR.INVALIDACTION
-        end
+    elseif not Bot.ACTIONPARAMS[action[1]].isvalid(action) then
+        return Utils.ERROR.INVALIDACTION
+    elseif Bot.ACTIONPARAMS[action[1]].func ~= BalatrobotAPI.waitingFor then
+        return Utils.ERROR.WRONGACTION
     end
+
+
+    -- if not BalatrobotAPI.waitingForAction then
+    --     return Utils.ERROR.NOTREADY
+    -- end
 
     return Utils.ERROR.NOERROR
 end

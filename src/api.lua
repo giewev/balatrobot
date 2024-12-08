@@ -8,23 +8,28 @@ BalatrobotAPI.socket = nil
 
 BalatrobotAPI.waitingFor = nil
 BalatrobotAPI.waitingForAction = true
+BalatrobotAPI.lastAction = nil
 
 function BalatrobotAPI.notifyapiclient()
     -- TODO Generate gamestate json object
-    local _gamestate = Utils.getGamestate()
-    _gamestate.waitingFor = BalatrobotAPI.waitingFor
-    sendDebugMessage('WaitingFor '..tostring(BalatrobotAPI.waitingFor))
-    _gamestate.waitingForAction = BalatrobotAPI.waitingFor ~= nil and BalatrobotAPI.waitingForAction or false
-    local _gamestateJsonString = json.encode(_gamestate)
+    local _gamestateJsonString = ''
+    if not BalatrobotAPI.waitingForAction then
+        local _gamestate = {waitingFor = BalatrobotAPI.waitingFor, waitingForActin = BalatrobotAPI.waitingForAction, lastAction = BalatrobotAPI.lastAction}
+        _gamestateJsonString = json.encode(_gamestate)
+    else
+        local _gamestate = Utils.getGamestate()
+        _gamestate.waitingFor = BalatrobotAPI.waitingFor
+        _gamestate.waitingForAction = BalatrobotAPI.waitingFor ~= nil and BalatrobotAPI.waitingForAction or false
+        _gamestate.lastAction = BalatrobotAPI.lastAction
+        _gamestateJsonString = json.encode(_gamestate)
+    end
 
     if BalatrobotAPI.socket and port_or_nil ~= nil then
-        sendDebugMessage(_gamestate.waitingFor)
         BalatrobotAPI.socket:sendto(string.format("%s", _gamestateJsonString), msg_or_ip, port_or_nil)
     end
 end
 
 function BalatrobotAPI.respond(str)
-    sendDebugMessage('respond')
     if BalatrobotAPI.socket and port_or_nil ~= nil then
         response = { }
         response.response = str
@@ -34,8 +39,10 @@ function BalatrobotAPI.respond(str)
 end
 
 function BalatrobotAPI.queueaction(action)
+    Botlogger.reset()
+    BalatrobotAPI.lastAction = action[1]
     local _params = Bot.ACTIONPARAMS[action[1]]
-    List.pushleft(Botlogger['q_'.._params.func], { 0, action })
+        List.pushleft(Botlogger['q_'.._params.func], { 0, action })
 end
 
 function BalatrobotAPI.update(dt)
@@ -44,19 +51,19 @@ function BalatrobotAPI.update(dt)
         BalatrobotAPI.socket = socket.udp()
         BalatrobotAPI.socket:settimeout(0)
         local port = arg[1] or BALATRO_BOT_CONFIG.port
-        BalatrobotAPI.socket:setsockname('127.0.0.1', tonumber(port))
+        BalatrobotAPI.socket:setsockname('0.0.0.0', tonumber(port))
     end
 
     data, msg_or_ip, port_or_nil = BalatrobotAPI.socket:receivefrom()
 	if data then
         if data == 'MENU' then
             Middleware.conditionalactions = { }
+            Middleware.queuedactions = List.new()
+            BalatrobotAPI.waitingForAction = false
+            BalatrobotAPI.waitingFor = 'start_run'
+            BalatrobotAPI.lastAction = 'MENU'
             G.FUNCS.go_to_menu({ })
-            -- Botlogger.reset()
-            -- BalatrobotAPI.waitingForAction = true
-            -- BalatrobotAPI.waitingFor = 'start_run'
-            -- Middleware.queuedactions = { }
-            -- Middleware.currentaction = nil
+            BalatrobotAPI.respond("Menu command received")
         elseif data == 'HELLO\n' or data == 'HELLO' then
             BalatrobotAPI.notifyapiclient()
         else
@@ -69,16 +76,20 @@ function BalatrobotAPI.update(dt)
                 BalatrobotAPI.respond("Error: Incorrect message format. Should be ACTION|arg1|arg2")
             elseif _err == Utils.ERROR.INVALIDACTION then
                 BalatrobotAPI.respond("Error: Action invalid for action " .. _action[1])
-            else
-                BalatrobotAPI.waitingForAction = false
+            elseif _err == Utils.ERROR.WRONGACTION then
+                BalatrobotAPI.respond("Error: Wrong action for current state " .. _action[1].. ' ' .. BalatrobotAPI.waitingFor)
+            elseif BalatrobotAPI.waitingForAction then
                 BalatrobotAPI.queueaction(_action)
+                BalatrobotAPI.waitingForAction = false
+                BalatrobotAPI.respond("Action queued"..data)
+            else
+                BalatrobotAPI.respond("Error: Not ready for action " .. _action[1])
             end
         end
-
 	elseif msg_or_ip ~= 'timeout' then
-		sendDebugMessage("Unknown network error: "..tostring(msg))
-	end
-	
+		sendDebugMessage("Unknown network error: "..tostring(msg_or_ip))
+    end
+
     -- No idea if this is necessary
     -- Without this being commented out, FPS capped out at ~80 for me
 	-- socket.sleep(0.01)
@@ -134,9 +145,12 @@ function BalatrobotAPI.init()
         end
     end
 
+    -- Disable the background animation
+    G.SETTINGS.reduced_motion = 1
+
     -- G.FUNCS.wipe_on = function(message, no_card, timefac, alt_colour) end
     -- G.FUNCS.wipe_off = function() end
-    -- delay = function(time, func) func() end
+    G.FUNCS.delay = function(time, queue) end
 
     -- Only draw/present every Nth frame
     local original_draw = love.draw

@@ -1,4 +1,6 @@
 import enum
+import json
+import pandas as pd
 
 
 class Suit(enum.Enum):
@@ -32,3 +34,42 @@ rank_lookup = {
     "3": 3,
     "2": 2,
 }
+
+with open("./gym_envs/joker_data.json") as joker_data_file:
+    ALL_JOKER_DATA = json.load(joker_data_file)
+
+
+# effects = set()
+# for x in ALL_JOKER_DATA:
+#     print(x["config"])
+#     print(x.get("effect", None))
+#     effects.add(x.get("effect", None))
+# print(effects)
+
+
+# df = pd.DataFrame(ALL_JOKER_DATA)
+
+
+# def unpack_dictionary_column(df, column):
+#     return pd.concat([df.drop([column], axis=1), df[column].apply(pd.Series)], axis=1)
+
+
+# for col in df.columns:
+#     if df[col].dtype == "object":
+#         df = unpack_dictionary_column(df, col)
+# print(df.columns)
+# print(df)
+
+# for col in df.columns:
+#     print(df[col].unique())
+
+joker_flags_df = pd.read_csv("./gym_envs/joker_flags.csv")
+
+for joker in ALL_JOKER_DATA:
+    flags = joker_flags_df[joker_flags_df["name"] == joker["name"]].iloc[0]
+    joker["flags"] = []
+    for flag in joker_flags_df.columns:
+        if flag not in ["name", "description"]:
+            joker["flags"].append(flags[flag])
+    # print(joker)
+    # print(len(joker["flags"]))

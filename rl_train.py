@@ -2,7 +2,7 @@ from stable_baselines3 import PPO
 from stable_baselines3.common.callbacks import CheckpointCallback
 import torch as th
 import numpy as np
-from gym_envs.balatro_blind_env import BalatroBlindEnv
+from gym_envs.balatro.blind_env import BalatroBlindEnv
 from stable_baselines3.common.vec_env import (
     SubprocVecEnv,
     VecMonitor,

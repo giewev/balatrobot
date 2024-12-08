@@ -1,0 +1,3167 @@
+[
+    {
+        "order": 1,
+        "unlocked": true,
+        "start_alerted": true,
+        "discovered": true,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 2,
+        "name": "Joker",
+        "pos": {
+            "x": 0,
+            "y": 0
+        },
+        "set": "Joker",
+        "effect": "Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "mult": 4
+        }
+    },
+    {
+        "order": 2,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Greedy Joker",
+        "pos": {
+            "x": 6,
+            "y": 1
+        },
+        "set": "Joker",
+        "effect": "Suit Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": {
+                "s_mult": 3,
+                "suit": "Diamonds"
+            }
+        }
+    },
+    {
+        "order": 3,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Lusty Joker",
+        "pos": {
+            "x": 7,
+            "y": 1
+        },
+        "set": "Joker",
+        "effect": "Suit Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": {
+                "s_mult": 3,
+                "suit": "Hearts"
+            }
+        }
+    },
+    {
+        "order": 4,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Wrathful Joker",
+        "pos": {
+            "x": 8,
+            "y": 1
+        },
+        "set": "Joker",
+        "effect": "Suit Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": {
+                "s_mult": 3,
+                "suit": "Spades"
+            }
+        }
+    },
+    {
+        "order": 5,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Gluttonous Joker",
+        "pos": {
+            "x": 9,
+            "y": 1
+        },
+        "set": "Joker",
+        "effect": "Suit Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": {
+                "s_mult": 3,
+                "suit": "Clubs"
+            }
+        }
+    },
+    {
+        "order": 6,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 3,
+        "name": "Jolly Joker",
+        "pos": {
+            "x": 2,
+            "y": 0
+        },
+        "set": "Joker",
+        "effect": "Type Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "t_mult": 8,
+            "type": "Pair"
+        }
+    },
+    {
+        "order": 7,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Zany Joker",
+        "pos": {
+            "x": 3,
+            "y": 0
+        },
+        "set": "Joker",
+        "effect": "Type Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "t_mult": 12,
+            "type": "Three of a Kind"
+        }
+    },
+    {
+        "order": 8,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Mad Joker",
+        "pos": {
+            "x": 4,
+            "y": 0
+        },
+        "set": "Joker",
+        "effect": "Type Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "t_mult": 10,
+            "type": "Two Pair"
+        }
+    },
+    {
+        "order": 9,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Crazy Joker",
+        "pos": {
+            "x": 5,
+            "y": 0
+        },
+        "set": "Joker",
+        "effect": "Type Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "t_mult": 12,
+            "type": "Straight"
+        }
+    },
+    {
+        "order": 10,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Droll Joker",
+        "pos": {
+            "x": 6,
+            "y": 0
+        },
+        "set": "Joker",
+        "effect": "Type Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "t_mult": 10,
+            "type": "Flush"
+        }
+    },
+    {
+        "order": 11,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 3,
+        "name": "Sly Joker",
+        "set": "Joker",
+        "config": {
+            "t_chips": 50,
+            "type": "Pair"
+        },
+        "pos": {
+            "x": 0,
+            "y": 14
+        }
+    },
+    {
+        "order": 12,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Wily Joker",
+        "set": "Joker",
+        "config": {
+            "t_chips": 100,
+            "type": "Three of a Kind"
+        },
+        "pos": {
+            "x": 1,
+            "y": 14
+        }
+    },
+    {
+        "order": 13,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Clever Joker",
+        "set": "Joker",
+        "config": {
+            "t_chips": 80,
+            "type": "Two Pair"
+        },
+        "pos": {
+            "x": 2,
+            "y": 14
+        }
+    },
+    {
+        "order": 14,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Devious Joker",
+        "set": "Joker",
+        "config": {
+            "t_chips": 100,
+            "type": "Straight"
+        },
+        "pos": {
+            "x": 3,
+            "y": 14
+        }
+    },
+    {
+        "order": 15,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Crafty Joker",
+        "set": "Joker",
+        "config": {
+            "t_chips": 80,
+            "type": "Flush"
+        },
+        "pos": {
+            "x": 4,
+            "y": 14
+        }
+    },
+    {
+        "order": 16,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Half Joker",
+        "pos": {
+            "x": 7,
+            "y": 0
+        },
+        "set": "Joker",
+        "effect": "Hand Size Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": {
+                "mult": 20,
+                "size": 3
+            }
+        }
+    },
+    {
+        "order": 17,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 8,
+        "name": "Joker Stencil",
+        "pos": {
+            "x": 2,
+            "y": 5
+        },
+        "set": "Joker",
+        "effect": "Hand Size Mult",
+        "cost_mult": 1.0,
+        "config": {}
+    },
+    {
+        "order": 18,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 7,
+        "name": "Four Fingers",
+        "pos": {
+            "x": 6,
+            "y": 6
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {}
+    },
+    {
+        "order": 19,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 5,
+        "name": "Mime",
+        "pos": {
+            "x": 4,
+            "y": 1
+        },
+        "set": "Joker",
+        "effect": "Hand card double",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 1
+        }
+    },
+    {
+        "order": 20,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 1,
+        "name": "Credit Card",
+        "pos": {
+            "x": 5,
+            "y": 1
+        },
+        "set": "Joker",
+        "effect": "Credit",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 20
+        }
+    },
+    {
+        "order": 21,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Ceremonial Dagger",
+        "pos": {
+            "x": 5,
+            "y": 5
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "mult": 0
+        }
+    },
+    {
+        "order": 22,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Banner",
+        "pos": {
+            "x": 1,
+            "y": 2
+        },
+        "set": "Joker",
+        "effect": "Discard Chips",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 30
+        }
+    },
+    {
+        "order": 23,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Mystic Summit",
+        "pos": {
+            "x": 2,
+            "y": 2
+        },
+        "set": "Joker",
+        "effect": "No Discard Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": {
+                "mult": 15,
+                "d_remaining": 0
+            }
+        }
+    },
+    {
+        "order": 24,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Marble Joker",
+        "pos": {
+            "x": 3,
+            "y": 2
+        },
+        "set": "Joker",
+        "effect": "Stone card hands",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 1
+        }
+    },
+    {
+        "order": 25,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 5,
+        "name": "Loyalty Card",
+        "pos": {
+            "x": 4,
+            "y": 2
+        },
+        "set": "Joker",
+        "effect": "1 in 10 mult",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": {
+                "Xmult": 4,
+                "every": 5,
+                "remaining": "5 remaining"
+            }
+        }
+    },
+    {
+        "order": 26,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "8 Ball",
+        "pos": {
+            "x": 0,
+            "y": 5
+        },
+        "set": "Joker",
+        "effect": "Spawn Tarot",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 4
+        }
+    },
+    {
+        "order": 27,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Misprint",
+        "pos": {
+            "x": 6,
+            "y": 2
+        },
+        "set": "Joker",
+        "effect": "Random Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": {
+                "max": 23,
+                "min": 0
+            }
+        }
+    },
+    {
+        "order": 28,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 5,
+        "name": "Dusk",
+        "pos": {
+            "x": 4,
+            "y": 7
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 1
+        },
+        "unlock_condition": {
+            "type": "",
+            "extra": "",
+            "hidden": true
+        }
+    },
+    {
+        "order": 29,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Raised Fist",
+        "pos": {
+            "x": 8,
+            "y": 2
+        },
+        "set": "Joker",
+        "effect": "Socialized Mult",
+        "cost_mult": 1.0,
+        "config": {}
+    },
+    {
+        "order": 30,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Chaos the Clown",
+        "pos": {
+            "x": 1,
+            "y": 0
+        },
+        "set": "Joker",
+        "effect": "Bonus Rerolls",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 1
+        }
+    },
+    {
+        "order": 31,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 8,
+        "name": "Fibonacci",
+        "pos": {
+            "x": 1,
+            "y": 5
+        },
+        "set": "Joker",
+        "effect": "Card Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 8
+        }
+    },
+    {
+        "order": 32,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 7,
+        "name": "Steel Joker",
+        "pos": {
+            "x": 7,
+            "y": 2
+        },
+        "set": "Joker",
+        "effect": "Steel Card Buff",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 0.2
+        },
+        "enhancement_gate": "m_steel"
+    },
+    {
+        "order": 33,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Scary Face",
+        "pos": {
+            "x": 2,
+            "y": 3
+        },
+        "set": "Joker",
+        "effect": "Scary Face Cards",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 30
+        }
+    },
+    {
+        "order": 34,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Abstract Joker",
+        "pos": {
+            "x": 3,
+            "y": 3
+        },
+        "set": "Joker",
+        "effect": "Joker Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 3
+        }
+    },
+    {
+        "order": 35,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Delayed Gratification",
+        "pos": {
+            "x": 4,
+            "y": 3
+        },
+        "set": "Joker",
+        "effect": "Discard dollars",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 2
+        }
+    },
+    {
+        "order": 36,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Hack",
+        "pos": {
+            "x": 5,
+            "y": 2
+        },
+        "set": "Joker",
+        "effect": "Low Card double",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 1
+        }
+    },
+    {
+        "order": 37,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 5,
+        "name": "Pareidolia",
+        "pos": {
+            "x": 6,
+            "y": 3
+        },
+        "set": "Joker",
+        "effect": "All face cards",
+        "cost_mult": 1.0,
+        "config": {}
+    },
+    {
+        "order": 38,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": false,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Gros Michel",
+        "pos": {
+            "x": 7,
+            "y": 6
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": {
+                "odds": 6,
+                "mult": 15
+            }
+        },
+        "no_pool_flag": "gros_michel_extinct"
+    },
+    {
+        "order": 39,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Even Steven",
+        "pos": {
+            "x": 8,
+            "y": 3
+        },
+        "set": "Joker",
+        "effect": "Even Card Buff",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 4
+        }
+    },
+    {
+        "order": 40,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Odd Todd",
+        "pos": {
+            "x": 9,
+            "y": 3
+        },
+        "set": "Joker",
+        "effect": "Odd Card Buff",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 31
+        }
+    },
+    {
+        "order": 41,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Scholar",
+        "pos": {
+            "x": 0,
+            "y": 4
+        },
+        "set": "Joker",
+        "effect": "Ace Buff",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": {
+                "mult": 4,
+                "chips": 20
+            }
+        }
+    },
+    {
+        "order": 42,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Business Card",
+        "pos": {
+            "x": 1,
+            "y": 4
+        },
+        "set": "Joker",
+        "effect": "Face Card dollar Chance",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 2
+        }
+    },
+    {
+        "order": 43,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Supernova",
+        "pos": {
+            "x": 2,
+            "y": 4
+        },
+        "set": "Joker",
+        "effect": "Hand played mult",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 1
+        }
+    },
+    {
+        "order": 44,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 6,
+        "name": "Ride the Bus",
+        "pos": {
+            "x": 1,
+            "y": 6
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 1
+        },
+        "unlock_condition": {
+            "type": "discard_custom"
+        }
+    },
+    {
+        "order": 45,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 5,
+        "name": "Space Joker",
+        "pos": {
+            "x": 3,
+            "y": 5
+        },
+        "set": "Joker",
+        "effect": "Upgrade Hand chance",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 4
+        }
+    },
+    {
+        "order": 46,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Egg",
+        "pos": {
+            "x": 0,
+            "y": 10
+        },
+        "set": "Joker",
+        "config": {
+            "extra": 3
+        }
+    },
+    {
+        "order": 47,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Burglar",
+        "pos": {
+            "x": 1,
+            "y": 10
+        },
+        "set": "Joker",
+        "config": {
+            "extra": 3
+        }
+    },
+    {
+        "order": 48,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Blackboard",
+        "pos": {
+            "x": 2,
+            "y": 10
+        },
+        "set": "Joker",
+        "config": {
+            "extra": 3
+        }
+    },
+    {
+        "order": 49,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Runner",
+        "pos": {
+            "x": 3,
+            "y": 10
+        },
+        "set": "Joker",
+        "config": {
+            "extra": {
+                "chips": 20,
+                "chip_mod": 10
+            }
+        }
+    },
+    {
+        "order": 50,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": false,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Ice Cream",
+        "pos": {
+            "x": 4,
+            "y": 10
+        },
+        "set": "Joker",
+        "config": {
+            "extra": {
+                "chips": 100,
+                "chip_mod": 5
+            }
+        }
+    },
+    {
+        "order": 51,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 8,
+        "name": "DNA",
+        "pos": {
+            "x": 5,
+            "y": 10
+        },
+        "set": "Joker",
+        "config": {}
+    },
+    {
+        "order": 52,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 3,
+        "name": "Splash",
+        "pos": {
+            "x": 6,
+            "y": 10
+        },
+        "set": "Joker",
+        "config": {}
+    },
+    {
+        "order": 53,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Blue Joker",
+        "pos": {
+            "x": 7,
+            "y": 10
+        },
+        "set": "Joker",
+        "config": {
+            "extra": 2
+        }
+    },
+    {
+        "order": 54,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Sixth Sense",
+        "pos": {
+            "x": 8,
+            "y": 10
+        },
+        "set": "Joker",
+        "config": {}
+    },
+    {
+        "order": 55,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Constellation",
+        "pos": {
+            "x": 9,
+            "y": 10
+        },
+        "set": "Joker",
+        "config": {
+            "extra": 0.1,
+            "Xmult": 1
+        }
+    },
+    {
+        "order": 56,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 5,
+        "name": "Hiker",
+        "pos": {
+            "x": 0,
+            "y": 11
+        },
+        "set": "Joker",
+        "config": {
+            "extra": 5
+        }
+    },
+    {
+        "order": 57,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Faceless Joker",
+        "pos": {
+            "x": 1,
+            "y": 11
+        },
+        "set": "Joker",
+        "config": {
+            "extra": {
+                "dollars": 5,
+                "faces": 3
+            }
+        }
+    },
+    {
+        "order": 58,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Green Joker",
+        "pos": {
+            "x": 2,
+            "y": 11
+        },
+        "set": "Joker",
+        "config": {
+            "extra": {
+                "hand_add": 1,
+                "discard_sub": 1
+            }
+        }
+    },
+    {
+        "order": 59,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Superposition",
+        "pos": {
+            "x": 3,
+            "y": 11
+        },
+        "set": "Joker",
+        "config": {}
+    },
+    {
+        "order": 60,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "To Do List",
+        "pos": {
+            "x": 4,
+            "y": 11
+        },
+        "set": "Joker",
+        "config": {
+            "extra": {
+                "dollars": 4,
+                "poker_hand": "High Card"
+            }
+        }
+    },
+    {
+        "order": 61,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": false,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Cavendish",
+        "pos": {
+            "x": 5,
+            "y": 11
+        },
+        "set": "Joker",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": {
+                "odds": 1000,
+                "Xmult": 3
+            }
+        },
+        "yes_pool_flag": "gros_michel_extinct"
+    },
+    {
+        "order": 62,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Card Sharp",
+        "pos": {
+            "x": 6,
+            "y": 11
+        },
+        "set": "Joker",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": {
+                "Xmult": 3
+            }
+        }
+    },
+    {
+        "order": 63,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Red Card",
+        "pos": {
+            "x": 7,
+            "y": 11
+        },
+        "set": "Joker",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 3
+        }
+    },
+    {
+        "order": 64,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 7,
+        "name": "Madness",
+        "pos": {
+            "x": 8,
+            "y": 11
+        },
+        "set": "Joker",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 0.5
+        }
+    },
+    {
+        "order": 65,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Square Joker",
+        "pos": {
+            "x": 9,
+            "y": 11
+        },
+        "set": "Joker",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": {
+                "chips": 16,
+                "chip_mod": 4
+            }
+        }
+    },
+    {
+        "order": 66,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Seance",
+        "pos": {
+            "x": 0,
+            "y": 12
+        },
+        "set": "Joker",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": {
+                "poker_hand": "Straight Flush"
+            }
+        }
+    },
+    {
+        "order": 67,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 6,
+        "name": "Riff-raff",
+        "pos": {
+            "x": 1,
+            "y": 12
+        },
+        "set": "Joker",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 2
+        }
+    },
+    {
+        "order": 68,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 8,
+        "name": "Vampire",
+        "set": "Joker",
+        "config": {
+            "extra": 0.1,
+            "Xmult": 1
+        },
+        "pos": {
+            "x": 2,
+            "y": 12
+        }
+    },
+    {
+        "order": 69,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 7,
+        "name": "Shortcut",
+        "set": "Joker",
+        "config": {},
+        "pos": {
+            "x": 3,
+            "y": 12
+        }
+    },
+    {
+        "order": 70,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 7,
+        "name": "Hologram",
+        "set": "Joker",
+        "config": {
+            "extra": 0.25,
+            "Xmult": 1
+        },
+        "pos": {
+            "x": 4,
+            "y": 12
+        },
+        "soul_pos": {
+            "x": 2,
+            "y": 9
+        }
+    },
+    {
+        "order": 71,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 8,
+        "name": "Vagabond",
+        "set": "Joker",
+        "config": {
+            "extra": 4
+        },
+        "pos": {
+            "x": 5,
+            "y": 12
+        }
+    },
+    {
+        "order": 72,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 8,
+        "name": "Baron",
+        "set": "Joker",
+        "config": {
+            "extra": 1.5
+        },
+        "pos": {
+            "x": 6,
+            "y": 12
+        }
+    },
+    {
+        "order": 73,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 7,
+        "name": "Cloud 9",
+        "set": "Joker",
+        "config": {
+            "extra": 1
+        },
+        "pos": {
+            "x": 7,
+            "y": 12
+        }
+    },
+    {
+        "order": 74,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Rocket",
+        "set": "Joker",
+        "config": {
+            "extra": {
+                "dollars": 1,
+                "increase": 2
+            }
+        },
+        "pos": {
+            "x": 8,
+            "y": 12
+        }
+    },
+    {
+        "order": 75,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 8,
+        "name": "Obelisk",
+        "set": "Joker",
+        "config": {
+            "extra": 0.2,
+            "Xmult": 1
+        },
+        "pos": {
+            "x": 9,
+            "y": 12
+        }
+    },
+    {
+        "order": 76,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 7,
+        "name": "Midas Mask",
+        "set": "Joker",
+        "config": {},
+        "pos": {
+            "x": 0,
+            "y": 13
+        }
+    },
+    {
+        "order": 77,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": false,
+        "rarity": 2,
+        "cost": 5,
+        "name": "Luchador",
+        "set": "Joker",
+        "config": {},
+        "pos": {
+            "x": 1,
+            "y": 13
+        }
+    },
+    {
+        "order": 78,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Photograph",
+        "set": "Joker",
+        "config": {
+            "extra": 2
+        },
+        "pos": {
+            "x": 2,
+            "y": 13
+        }
+    },
+    {
+        "order": 79,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Gift Card",
+        "set": "Joker",
+        "config": {
+            "extra": 1
+        },
+        "pos": {
+            "x": 3,
+            "y": 13
+        }
+    },
+    {
+        "order": 80,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": false,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Turtle Bean",
+        "set": "Joker",
+        "config": {
+            "extra": {
+                "h_size": 5,
+                "h_mod": 1
+            }
+        },
+        "pos": {
+            "x": 4,
+            "y": 13
+        }
+    },
+    {
+        "order": 81,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Erosion",
+        "set": "Joker",
+        "config": {
+            "extra": 4
+        },
+        "pos": {
+            "x": 5,
+            "y": 13
+        }
+    },
+    {
+        "order": 82,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 6,
+        "name": "Reserved Parking",
+        "set": "Joker",
+        "config": {
+            "extra": {
+                "odds": 2,
+                "dollars": 1
+            }
+        },
+        "pos": {
+            "x": 6,
+            "y": 13
+        }
+    },
+    {
+        "order": 83,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Mail-In Rebate",
+        "set": "Joker",
+        "config": {
+            "extra": 5
+        },
+        "pos": {
+            "x": 7,
+            "y": 13
+        }
+    },
+    {
+        "order": 84,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 5,
+        "name": "To the Moon",
+        "set": "Joker",
+        "config": {
+            "extra": 1
+        },
+        "pos": {
+            "x": 8,
+            "y": 13
+        }
+    },
+    {
+        "order": 85,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Hallucination",
+        "set": "Joker",
+        "config": {
+            "extra": 2
+        },
+        "pos": {
+            "x": 9,
+            "y": 13
+        }
+    },
+    {
+        "order": 86,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 6,
+        "name": "Fortune Teller",
+        "pos": {
+            "x": 7,
+            "y": 5
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 1
+        }
+    },
+    {
+        "order": 87,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Juggler",
+        "pos": {
+            "x": 0,
+            "y": 1
+        },
+        "set": "Joker",
+        "effect": "Hand Size",
+        "cost_mult": 1.0,
+        "config": {
+            "h_size": 1
+        }
+    },
+    {
+        "order": 88,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Drunkard",
+        "pos": {
+            "x": 1,
+            "y": 1
+        },
+        "set": "Joker",
+        "effect": "Discard Size",
+        "cost_mult": 1.0,
+        "config": {
+            "d_size": 1
+        }
+    },
+    {
+        "order": 89,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Stone Joker",
+        "pos": {
+            "x": 9,
+            "y": 0
+        },
+        "set": "Joker",
+        "effect": "Stone Card Buff",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 25
+        },
+        "enhancement_gate": "m_stone"
+    },
+    {
+        "order": 90,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 6,
+        "name": "Golden Joker",
+        "pos": {
+            "x": 9,
+            "y": 2
+        },
+        "set": "Joker",
+        "effect": "Bonus dollars",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 4
+        }
+    },
+    {
+        "order": 91,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Lucky Cat",
+        "set": "Joker",
+        "config": {
+            "Xmult": 1,
+            "extra": 0.25
+        },
+        "pos": {
+            "x": 5,
+            "y": 14
+        },
+        "enhancement_gate": "m_lucky"
+    },
+    {
+        "order": 92,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 8,
+        "name": "Baseball Card",
+        "set": "Joker",
+        "config": {
+            "extra": 1.5
+        },
+        "pos": {
+            "x": 6,
+            "y": 14
+        }
+    },
+    {
+        "order": 93,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Bull",
+        "set": "Joker",
+        "config": {
+            "extra": 2
+        },
+        "pos": {
+            "x": 7,
+            "y": 14
+        }
+    },
+    {
+        "order": 94,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": false,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Diet Cola",
+        "set": "Joker",
+        "config": {},
+        "pos": {
+            "x": 8,
+            "y": 14
+        }
+    },
+    {
+        "order": 95,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Trading Card",
+        "set": "Joker",
+        "config": {
+            "extra": 3
+        },
+        "pos": {
+            "x": 9,
+            "y": 14
+        }
+    },
+    {
+        "order": 96,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 5,
+        "name": "Flash Card",
+        "set": "Joker",
+        "config": {
+            "extra": 2,
+            "mult": 0
+        },
+        "pos": {
+            "x": 0,
+            "y": 15
+        }
+    },
+    {
+        "order": 97,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": false,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Popcorn",
+        "set": "Joker",
+        "config": {
+            "mult": 20,
+            "extra": 4
+        },
+        "pos": {
+            "x": 1,
+            "y": 15
+        }
+    },
+    {
+        "order": 98,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Spare Trousers",
+        "set": "Joker",
+        "config": {
+            "extra": 2
+        },
+        "pos": {
+            "x": 4,
+            "y": 15
+        }
+    },
+    {
+        "order": 99,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 8,
+        "name": "Ancient Joker",
+        "set": "Joker",
+        "config": {
+            "extra": 1.5
+        },
+        "pos": {
+            "x": 7,
+            "y": 15
+        }
+    },
+    {
+        "order": 100,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": false,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Ramen",
+        "set": "Joker",
+        "config": {
+            "Xmult": 2,
+            "extra": 0.01
+        },
+        "pos": {
+            "x": 2,
+            "y": 15
+        }
+    },
+    {
+        "order": 101,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Walkie Talkie",
+        "set": "Joker",
+        "config": {
+            "extra": {
+                "chips": 10,
+                "mult": 4
+            }
+        },
+        "pos": {
+            "x": 8,
+            "y": 15
+        }
+    },
+    {
+        "order": 102,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": false,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Seltzer",
+        "set": "Joker",
+        "config": {
+            "extra": 10
+        },
+        "pos": {
+            "x": 3,
+            "y": 15
+        }
+    },
+    {
+        "order": 103,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Castle",
+        "set": "Joker",
+        "config": {
+            "extra": {
+                "chips": 0,
+                "chip_mod": 3
+            }
+        },
+        "pos": {
+            "x": 9,
+            "y": 15
+        }
+    },
+    {
+        "order": 104,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Smiley Face",
+        "set": "Joker",
+        "config": {
+            "extra": 5
+        },
+        "pos": {
+            "x": 6,
+            "y": 15
+        }
+    },
+    {
+        "order": 105,
+        "unlocked": true,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 9,
+        "name": "Campfire",
+        "set": "Joker",
+        "config": {
+            "extra": 0.25
+        },
+        "pos": {
+            "x": 5,
+            "y": 15
+        }
+    },
+    {
+        "order": 106,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Golden Ticket",
+        "pos": {
+            "x": 5,
+            "y": 3
+        },
+        "set": "Joker",
+        "effect": "dollars for Gold cards",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 4
+        },
+        "unlock_condition": {
+            "type": "hand_contents",
+            "extra": "Gold"
+        },
+        "enhancement_gate": "m_gold"
+    },
+    {
+        "order": 107,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": false,
+        "rarity": 2,
+        "cost": 5,
+        "name": "Mr. Bones",
+        "pos": {
+            "x": 3,
+            "y": 4
+        },
+        "set": "Joker",
+        "effect": "Prevent Death",
+        "cost_mult": 1.0,
+        "config": {},
+        "unlock_condition": {
+            "type": "c_losses",
+            "extra": 5
+        }
+    },
+    {
+        "order": 108,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Acrobat",
+        "pos": {
+            "x": 2,
+            "y": 1
+        },
+        "set": "Joker",
+        "effect": "Shop size",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 3
+        },
+        "unlock_condition": {
+            "type": "c_hands_played",
+            "extra": 200
+        }
+    },
+    {
+        "order": 109,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Sock and Buskin",
+        "pos": {
+            "x": 3,
+            "y": 1
+        },
+        "set": "Joker",
+        "effect": "Face card double",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 1
+        },
+        "unlock_condition": {
+            "type": "c_face_cards_played",
+            "extra": 300
+        }
+    },
+    {
+        "order": 110,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Swashbuckler",
+        "pos": {
+            "x": 9,
+            "y": 5
+        },
+        "set": "Joker",
+        "effect": "Set Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "mult": 1
+        },
+        "unlock_condition": {
+            "type": "c_jokers_sold",
+            "extra": 20
+        }
+    },
+    {
+        "order": 111,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Troubadour",
+        "pos": {
+            "x": 0,
+            "y": 2
+        },
+        "set": "Joker",
+        "effect": "Hand Size, Plays",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": {
+                "h_size": 2,
+                "h_plays": -1
+            }
+        },
+        "unlock_condition": {
+            "type": "round_win",
+            "extra": 5
+        }
+    },
+    {
+        "order": 112,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Certificate",
+        "pos": {
+            "x": 8,
+            "y": 8
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {},
+        "unlock_condition": {
+            "type": "double_gold"
+        }
+    },
+    {
+        "order": 113,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 7,
+        "name": "Smeared Joker",
+        "pos": {
+            "x": 4,
+            "y": 6
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {},
+        "unlock_condition": {
+            "type": "modify_deck",
+            "extra": {
+                "count": 3,
+                "enhancement": "Wild Card",
+                "e_key": "m_wild"
+            }
+        }
+    },
+    {
+        "order": 114,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Throwback",
+        "pos": {
+            "x": 5,
+            "y": 7
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 0.25
+        },
+        "unlock_condition": {
+            "type": "continue_game"
+        }
+    },
+    {
+        "order": 115,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 4,
+        "name": "Hanging Chad",
+        "pos": {
+            "x": 9,
+            "y": 6
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 2
+        },
+        "unlock_condition": {
+            "type": "round_win",
+            "extra": "High Card"
+        }
+    },
+    {
+        "order": 116,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 7,
+        "name": "Rough Gem",
+        "pos": {
+            "x": 9,
+            "y": 7
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 1
+        },
+        "unlock_condition": {
+            "type": "modify_deck",
+            "extra": {
+                "count": 30,
+                "suit": "Diamonds"
+            }
+        }
+    },
+    {
+        "order": 117,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 7,
+        "name": "Bloodstone",
+        "pos": {
+            "x": 0,
+            "y": 8
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": {
+                "odds": 2,
+                "Xmult": 2
+            }
+        },
+        "unlock_condition": {
+            "type": "modify_deck",
+            "extra": {
+                "count": 30,
+                "suit": "Hearts"
+            }
+        }
+    },
+    {
+        "order": 118,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 7,
+        "name": "Arrowhead",
+        "pos": {
+            "x": 1,
+            "y": 8
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 50
+        },
+        "unlock_condition": {
+            "type": "modify_deck",
+            "extra": {
+                "count": 30,
+                "suit": "Spades"
+            }
+        }
+    },
+    {
+        "order": 119,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 7,
+        "name": "Onyx Agate",
+        "pos": {
+            "x": 2,
+            "y": 8
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 7
+        },
+        "unlock_condition": {
+            "type": "modify_deck",
+            "extra": {
+                "count": 30,
+                "suit": "Clubs"
+            }
+        }
+    },
+    {
+        "order": 120,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Glass Joker",
+        "pos": {
+            "x": 1,
+            "y": 3
+        },
+        "set": "Joker",
+        "effect": "Glass Card",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 0.75,
+            "Xmult": 1
+        },
+        "unlock_condition": {
+            "type": "modify_deck",
+            "extra": {
+                "count": 5,
+                "enhancement": "Glass Card",
+                "e_key": "m_glass"
+            }
+        },
+        "enhancement_gate": "m_glass"
+    },
+    {
+        "order": 121,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 5,
+        "name": "Showman",
+        "pos": {
+            "x": 6,
+            "y": 5
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {},
+        "unlock_condition": {
+            "type": "ante_up",
+            "ante": 4
+        }
+    },
+    {
+        "order": 122,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Flower Pot",
+        "pos": {
+            "x": 0,
+            "y": 6
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 3
+        },
+        "unlock_condition": {
+            "type": "ante_up",
+            "ante": 8
+        }
+    },
+    {
+        "order": 123,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 10,
+        "name": "Blueprint",
+        "pos": {
+            "x": 0,
+            "y": 3
+        },
+        "set": "Joker",
+        "effect": "Copycat",
+        "cost_mult": 1.0,
+        "config": {},
+        "unlock_condition": {
+            "type": "win_custom"
+        }
+    },
+    {
+        "order": 124,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 8,
+        "name": "Wee Joker",
+        "pos": {
+            "x": 0,
+            "y": 0
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": {
+                "chips": 10,
+                "chip_mod": 8
+            }
+        },
+        "unlock_condition": {
+            "type": "win",
+            "n_rounds": 18
+        }
+    },
+    {
+        "order": 125,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 7,
+        "name": "Merry Andy",
+        "pos": {
+            "x": 8,
+            "y": 0
+        },
+        "set": "Joker",
+        "effect": "",
+        "cost_mult": 1.0,
+        "config": {
+            "d_size": 3,
+            "h_size": -1
+        },
+        "unlock_condition": {
+            "type": "win",
+            "n_rounds": 12
+        }
+    },
+    {
+        "order": 126,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 4,
+        "name": "Oops! All 6s",
+        "pos": {
+            "x": 5,
+            "y": 6
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {},
+        "unlock_condition": {
+            "type": "chip_score",
+            "chips": 10000
+        }
+    },
+    {
+        "order": 127,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "The Idol",
+        "pos": {
+            "x": 6,
+            "y": 7
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 2
+        },
+        "unlock_condition": {
+            "type": "chip_score",
+            "chips": 1000000
+        }
+    },
+    {
+        "order": 128,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Seeing Double",
+        "pos": {
+            "x": 4,
+            "y": 4
+        },
+        "set": "Joker",
+        "effect": "X1.5 Mult club 7",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 2
+        },
+        "unlock_condition": {
+            "type": "hand_contents",
+            "extra": "four 7 of Clubs"
+        }
+    },
+    {
+        "order": 129,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 7,
+        "name": "Matador",
+        "pos": {
+            "x": 4,
+            "y": 5
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 8
+        },
+        "unlock_condition": {
+            "type": "round_win"
+        }
+    },
+    {
+        "order": 130,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 8,
+        "name": "Hit the Road",
+        "pos": {
+            "x": 8,
+            "y": 5
+        },
+        "set": "Joker",
+        "effect": "Jack Discard Effect",
+        "cost_mult": 1.0,
+        "config": {
+            "extra": 0.5
+        },
+        "unlock_condition": {
+            "type": "discard_custom"
+        }
+    },
+    {
+        "order": 131,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 8,
+        "name": "The Duo",
+        "pos": {
+            "x": 5,
+            "y": 4
+        },
+        "set": "Joker",
+        "effect": "X1.5 Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "Xmult": 2,
+            "type": "Pair"
+        },
+        "unlock_condition": {
+            "type": "win_no_hand",
+            "extra": "Pair"
+        }
+    },
+    {
+        "order": 132,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 8,
+        "name": "The Trio",
+        "pos": {
+            "x": 6,
+            "y": 4
+        },
+        "set": "Joker",
+        "effect": "X2 Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "Xmult": 3,
+            "type": "Three of a Kind"
+        },
+        "unlock_condition": {
+            "type": "win_no_hand",
+            "extra": "Three of a Kind"
+        }
+    },
+    {
+        "order": 133,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 8,
+        "name": "The Family",
+        "pos": {
+            "x": 7,
+            "y": 4
+        },
+        "set": "Joker",
+        "effect": "X3 Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "Xmult": 4,
+            "type": "Four of a Kind"
+        },
+        "unlock_condition": {
+            "type": "win_no_hand",
+            "extra": "Four of a Kind"
+        }
+    },
+    {
+        "order": 134,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 8,
+        "name": "The Order",
+        "pos": {
+            "x": 8,
+            "y": 4
+        },
+        "set": "Joker",
+        "effect": "X3 Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "Xmult": 3,
+            "type": "Straight"
+        },
+        "unlock_condition": {
+            "type": "win_no_hand",
+            "extra": "Straight"
+        }
+    },
+    {
+        "order": 135,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 8,
+        "name": "The Tribe",
+        "pos": {
+            "x": 9,
+            "y": 4
+        },
+        "set": "Joker",
+        "effect": "X3 Mult",
+        "cost_mult": 1.0,
+        "config": {
+            "Xmult": 2,
+            "type": "Flush"
+        },
+        "unlock_condition": {
+            "type": "win_no_hand",
+            "extra": "Flush"
+        }
+    },
+    {
+        "order": 136,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Stuntman",
+        "pos": {
+            "x": 8,
+            "y": 6
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": {
+                "h_size": 2,
+                "chip_mod": 250
+            }
+        },
+        "unlock_condition": {
+            "type": "chip_score",
+            "chips": 100000000
+        }
+    },
+    {
+        "order": 137,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": false,
+        "rarity": 3,
+        "cost": 8,
+        "name": "Invisible Joker",
+        "pos": {
+            "x": 1,
+            "y": 7
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 2
+        },
+        "unlock_condition": {
+            "type": "win_custom"
+        }
+    },
+    {
+        "order": 138,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 10,
+        "name": "Brainstorm",
+        "pos": {
+            "x": 7,
+            "y": 7
+        },
+        "set": "Joker",
+        "effect": "Copycat",
+        "config": {},
+        "unlock_condition": {
+            "type": "discard_custom"
+        }
+    },
+    {
+        "order": 139,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Satellite",
+        "pos": {
+            "x": 8,
+            "y": 7
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 1
+        },
+        "unlock_condition": {
+            "type": "money",
+            "extra": 400
+        }
+    },
+    {
+        "order": 140,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 1,
+        "cost": 5,
+        "name": "Shoot the Moon",
+        "pos": {
+            "x": 2,
+            "y": 6
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 13
+        },
+        "unlock_condition": {
+            "type": "play_all_hearts"
+        }
+    },
+    {
+        "order": 141,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 7,
+        "name": "Driver's License",
+        "pos": {
+            "x": 0,
+            "y": 7
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 3
+        },
+        "unlock_condition": {
+            "type": "modify_deck",
+            "extra": {
+                "count": 16,
+                "tally": "total"
+            }
+        }
+    },
+    {
+        "order": 142,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 6,
+        "name": "Cartomancer",
+        "pos": {
+            "x": 7,
+            "y": 3
+        },
+        "set": "Joker",
+        "effect": "Tarot Buff",
+        "cost_mult": 1.0,
+        "config": {},
+        "unlock_condition": {
+            "type": "discover_amount",
+            "tarot_count": 22
+        }
+    },
+    {
+        "order": 143,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 8,
+        "name": "Astronomer",
+        "pos": {
+            "x": 2,
+            "y": 7
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {},
+        "unlock_condition": {
+            "type": "discover_amount",
+            "planet_count": 12
+        }
+    },
+    {
+        "order": 144,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 3,
+        "cost": 8,
+        "name": "Burnt Joker",
+        "pos": {
+            "x": 3,
+            "y": 7
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "h_size": 0,
+            "extra": 4
+        },
+        "unlock_condition": {
+            "type": "c_cards_sold",
+            "extra": 50
+        }
+    },
+    {
+        "order": 145,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 2,
+        "cost": 7,
+        "name": "Bootstraps",
+        "pos": {
+            "x": 9,
+            "y": 8
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": {
+                "mult": 2,
+                "dollars": 5
+            }
+        },
+        "unlock_condition": {
+            "type": "modify_jokers",
+            "extra": {
+                "polychrome": true,
+                "count": 2
+            }
+        }
+    },
+    {
+        "order": 146,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 4,
+        "cost": 20,
+        "name": "Caino",
+        "pos": {
+            "x": 3,
+            "y": 8
+        },
+        "soul_pos": {
+            "x": 3,
+            "y": 9
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 1
+        },
+        "unlock_condition": {
+            "type": "",
+            "extra": "",
+            "hidden": true
+        }
+    },
+    {
+        "order": 147,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 4,
+        "cost": 20,
+        "name": "Triboulet",
+        "pos": {
+            "x": 4,
+            "y": 8
+        },
+        "soul_pos": {
+            "x": 4,
+            "y": 9
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": 2
+        },
+        "unlock_condition": {
+            "type": "",
+            "extra": "",
+            "hidden": true
+        }
+    },
+    {
+        "order": 148,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 4,
+        "cost": 20,
+        "name": "Yorick",
+        "pos": {
+            "x": 5,
+            "y": 8
+        },
+        "soul_pos": {
+            "x": 5,
+            "y": 9
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {
+            "extra": {
+                "xmult": 1,
+                "discards": 23
+            }
+        },
+        "unlock_condition": {
+            "type": "",
+            "extra": "",
+            "hidden": true
+        }
+    },
+    {
+        "order": 149,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": false,
+        "eternal_compat": true,
+        "rarity": 4,
+        "cost": 20,
+        "name": "Chicot",
+        "pos": {
+            "x": 6,
+            "y": 8
+        },
+        "soul_pos": {
+            "x": 6,
+            "y": 9
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {},
+        "unlock_condition": {
+            "type": "",
+            "extra": "",
+            "hidden": true
+        }
+    },
+    {
+        "order": 150,
+        "unlocked": false,
+        "discovered": false,
+        "blueprint_compat": true,
+        "eternal_compat": true,
+        "rarity": 4,
+        "cost": 20,
+        "name": "Perkeo",
+        "pos": {
+            "x": 7,
+            "y": 8
+        },
+        "soul_pos": {
+            "x": 7,
+            "y": 9
+        },
+        "set": "Joker",
+        "effect": "",
+        "config": {},
+        "unlock_condition": {
+            "type": "",
+            "extra": "",
+            "hidden": true
+        }
+    }
+]

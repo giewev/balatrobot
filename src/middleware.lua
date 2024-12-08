@@ -493,6 +493,7 @@ function Middleware.c_start_run()
     end,
 
     function(_action, _stake, _deck, _seed, _challenge)
+        sendDebugMessage('Starting run with: ' .. _stake .. ' ' .. _deck .. ' ' .. _seed .. ' ' .. _challenge)
         queueaction(function()
             local _play_button = G.MAIN_MENU_UI:get_UIE_by_ID('main_menu_play')
             G.FUNCS[_play_button.config.button]({
