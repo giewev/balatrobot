@@ -1,7 +1,7 @@
 from stable_baselines3 import PPO
 import os
 import glob
-from gym_envs.balatro.blind_env import BalatroBlindEnv
+from gym_envs.real_balatro.blind_env import BalatroBlindEnv
 from stable_baselines3.common.vec_env import (
     DummyVecEnv,
     VecNormalize,

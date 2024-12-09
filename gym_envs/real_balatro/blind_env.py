@@ -5,7 +5,7 @@ import time
 from gamestates import cache_state
 from gymnasium import spaces as sp
 from balatro_connection import BalatroConnection
-from gym_envs.balatro.base_env import BalatroBaseEnv
+from gym_envs.real_balatro.base_env import BalatroBaseEnv
 from gym_envs.balatro_constants import Suit, rank_lookup
 from random import randint
 from ray.rllib.utils.spaces.repeated import Repeated
@@ -59,8 +59,8 @@ class BalatroBlindEnv(BalatroBaseEnv):
                 "hands_left": hands_left,
                 "hand": hand,
                 "hand_size": hand_size,
-                # "owned_jokers": owned_jokers,
-                # "num_jokers": num_jokers,
+                "owned_jokers": owned_jokers,
+                "owned_jokers_count": num_jokers,
             }
         )
 
@@ -175,12 +175,17 @@ class BalatroBlindEnv(BalatroBaseEnv):
         chips = np.array([G["chips"]], dtype=np.float32)
         chips /= G["current_round"]["chips_required"]
 
+        owned_jokers = [self.joker_observer.observe(joker) for joker in G["jokers"]]
+        num_jokers = np.array(len(G["jokers"]), dtype=np.float32)
+
         return {
             "chips": chips,
             "discards_left": discards_left,
             "hands_left": hands_left,
             "hand": hand,
             "hand_size": len(hand),
+            "owned_jokers": owned_jokers,
+            "owned_jokers_count": num_jokers,
         }
 
     def card_to_vectors(self, card):

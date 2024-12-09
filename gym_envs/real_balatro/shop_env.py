@@ -1,6 +1,6 @@
 import gymnasium as gym
 from gymnasium import spaces as sp
-from gym_envs.balatro.base_env import BalatroBaseEnv
+from gym_envs.real_balatro.base_env import BalatroBaseEnv
 from balatro_connection import State, Actions
 import numpy as np
 from gym_envs.joker_observer import JokerObserver

@@ -1,7 +1,7 @@
 from ray.rllib.env import MultiAgentEnv
 from gymnasium import spaces as sp
-from gym_envs.balatro.blind_env import BalatroBlindEnv
-from gym_envs.balatro.shop_env import BalatroShopEnv
+from gym_envs.real_balatro.blind_env import BalatroBlindEnv
+from gym_envs.real_balatro.shop_env import BalatroShopEnv
 from balatro_connection import BalatroConnection
 import time
 

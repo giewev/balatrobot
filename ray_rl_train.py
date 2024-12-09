@@ -4,9 +4,9 @@ os.environ["RAY_DEDUP_LOGS"] = "0"
 import ray
 import ray.rllib
 from ray.rllib.algorithms.ppo import PPOConfig
-from gym_envs.balatro.hierarchical_env import BalatroHierarchicalEnv
-from gym_envs.balatro.blind_env import BalatroBlindEnv
-from gym_envs.balatro.shop_env import BalatroShopEnv
+from gym_envs.real_balatro.hierarchical_env import BalatroHierarchicalEnv
+from gym_envs.real_balatro.blind_env import BalatroBlindEnv
+from gym_envs.real_balatro.shop_env import BalatroShopEnv
 from ray.rllib.env.single_agent_env_runner import SingleAgentEnvRunner
 from ray.rllib.env.multi_agent_env_runner import MultiAgentEnvRunner
 from ray.rllib.connectors.env_to_module import (

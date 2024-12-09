@@ -12,12 +12,6 @@ class BalatroBlindModel(TorchModelV2, nn.Module):
         )
         nn.Module.__init__(self)
 
-        # print(obs_space)
-        # print(action_space)
-        # print(num_outputs)
-        # print(model_config)
-        # print(name)
-
         self.recurrent_hand_layer = nn.LSTM(
             input_size=18,
             hidden_size=256,
@@ -29,7 +23,7 @@ class BalatroBlindModel(TorchModelV2, nn.Module):
         )
 
         self.relu = nn.LeakyReLU(negative_slope=0.01)
-        self.hidden_layer_1 = nn.Linear(512 + 4, 256)
+        self.hidden_layer_1 = nn.Linear(512 + 3, 256)
         self.hidden_layer_2 = nn.Linear(256, 256)
         self._last_hidden = None
         self.final_layer = nn.Linear(256, num_outputs)
