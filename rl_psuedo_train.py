@@ -174,8 +174,10 @@ def blind_config():
                 "correct_reward": 1.0,
                 "incorrect_penalty": 0.3,
                 "discard_penalty": 0.05,
+                "chips_reward_weight": 1.0,
+                "hand_type_reward_weight": 0.0,
                 "infinite_deck": False,
-                "bias": 1.0,
+                "bias": 0.0,
                 "rarity_bonus": 0.0,
             },
             observation_space=PseudoBlindEnv.build_observation_space(hand_size),
@@ -184,44 +186,29 @@ def blind_config():
         .callbacks(RoundLoggerCallback)
         .framework("torch")
         .resources(num_gpus=1, num_cpus_per_worker=1)
-        # .resources(num_gpus=1)
         .env_runners(
-            num_env_runners=15,
+            num_env_runners=10,
             num_envs_per_env_runner=10,
             sample_timeout_s=60,
             rollout_fragment_length="auto",
+            # This would be good to use, but it breaks certain metadata passed to the model
             # observation_filter="MeanStdFilter",
-            batch_mode="complete_episodes",
+            # batch_mode="complete_episodes",
         )
         .training(
             # model={"uses_new_env_runners": True},
-            # train_batch_size=tune.choice([256, 512, 1024, 2048, 4096]),
             train_batch_size=int(2**10),
             sgd_minibatch_size=int(2**10),
-            # num_sgd_iter=tune.randint(1, 21),
             num_sgd_iter=1,
             grad_clip=10,
             lr=8e-4,
-            # lr=tune.loguniform(1e-6, 1e-3),
             gamma=0.99,
             kl_coeff=0.0,
             # clip_param=0.1,
             entropy_coeff=0.001,
-            # entropy_coeff_schedule=[
-            #     (0, 0.5),
-            #     (int(1e4), 0.1),
-            #     (int(3e4), 0.01),
-            #     (int(1e5), 0.01),
-            #     (int(3e5), 0.005),
-            #     (int(5e5), 0.000),
-            # ],
-            # entropy_coeff=tune.loguniform(1e-3, 5e-2),
             # vf_clip_param=10.0,
             kl_target=0.002,
-            # kl_target=tune.loguniform(1e-4, 1e-2),
-            # lambda_=tune.uniform(0.8, 1.0),
             lambda_=0.99,
-            # vf_loss_coeff=tune.uniform(0.2, 1.0),
             vf_loss_coeff=0.5,
             model={
                 "custom_model": "attn_blind_deck_model",
@@ -361,7 +348,6 @@ def policy_mapper(agent_id, episode, **kwargs):
 
 
 if __name__ == "__main__":
-
     model_name = "ppo_play_hand_type"
     # torch.autograd.set_detect_anomaly(True)
     ray.init()
@@ -432,4 +418,5 @@ if __name__ == "__main__":
         algo.save(f"model_snapshots/{model_name}/latest")
         if i % snapshot_interval == 0:
             algo.save(f"model_snapshots/{model_name}/snapshot_{i}")
+        print(i)
         i += 1

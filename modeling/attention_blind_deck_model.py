@@ -258,7 +258,7 @@ class AttentionBlindDeckModel(TorchModelV2, nn.Module):
         #     q = attn + flat_attn
         #     kv = attn
 
-        attn = self.attention_layer(q, kv)
+        attn = self.attention_layer(q, kv)[0]
 
         # Cut out the deck, keep only the hand
         # attn = attn[:, : self.hand_size, :]

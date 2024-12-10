@@ -35,8 +35,8 @@ class PseudoBlindEnv(BlindLikeBaseEnv):
 
         self.max_discards = {x: 4 for x in self.hand_scores.keys()}
         self.max_plays = {x: 1 for x in self.hand_scores.keys()}
-        self.chips_reward = 1 / 50
-        self.hand_type_reward = 1.0
+        self.chips_reward_weight = env_config.get("chips_reward_weight", 1.0)
+        self.hand_type_reward_weight = env_config.get("hand_type_reward_weight", 0.0)
 
         self.joker_observer = JokerObserver()
 
@@ -131,10 +131,10 @@ class PseudoBlindEnv(BlindLikeBaseEnv):
             #     reward += self.biases[self.target_hand_type]
             # capped_score = min(hand_score, 300 - old_chips)
             # reward = capped_score / 300
-            reward = hand_score * self.chips_reward
+            reward = hand_score * self.chips_reward_weight
             reward += (
                 self.target_hand_types[self.hand_to_id[hand_type]]
-                * self.hand_type_reward
+                * self.hand_type_reward_weight
             )
 
             avg_rarity = sum(self.rarities.values()) / len(self.rarities)
