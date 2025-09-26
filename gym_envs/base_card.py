@@ -2,7 +2,6 @@ from copy import deepcopy
 from gymnasium import spaces as sp
 import numpy as np
 from random import randint, choice, random
-import torch
 
 
 class BaseCard:
